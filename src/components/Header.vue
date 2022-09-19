@@ -1,4 +1,3 @@
-
 <template>
   <header class='navbar'>
     <div class='container'>
@@ -24,6 +23,7 @@
 
 <script>
 import { app, links } from '@/_config';
+
 export default {
 	data() {
 		return {
