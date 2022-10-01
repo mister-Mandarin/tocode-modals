@@ -1,9 +1,9 @@
 <template>
   <div class="md-body">
 
-<!--    простое модальное окно-->
+    <!--    простое модальное окно-->
     <Modals v-show="showFirstModal" :title="firstModalTitle" @close="closeFirst">
-        <template v-slot:body>
+      <template v-slot:body>
         <p>
           Далеко-далеко за словесными горами в стране гласных и согласных живут
           рыбные тексты.
@@ -11,7 +11,7 @@
         <button class="btn btnPrimary" @click="showFirstModal = false">
           Close
         </button>
-      </template> 
+      </template>
     </Modals>
     <button class="btn btnPrimary" @click="showFirstModal = true">
       {{ firstModalTitle }}
@@ -40,7 +40,7 @@
     <button class="btn btnPrimary" @click="modalValidate = true">
       Модальное окно с формой + валидация
     </button>
-    <modal-validate v-show="modalValidate" @close="modalValidate = false"/>
+    <modalValidate v-show="modalValidate" @close="modalValidate = false" />
   </div>
 </template>
 
@@ -67,7 +67,7 @@ export default {
 	},
 	methods: {
 		submitSecondForm() {
-			console.log( {
+			console.log({
 				name: this.secondModal.name,
 				email: this.secondModal.email
 			}
@@ -78,7 +78,7 @@ export default {
 		},
 		closeFirst() {
 			this.showFirstModal = !this.showFirstModal;
-		},
-	},
+		}
+	}
 };
 </script>
