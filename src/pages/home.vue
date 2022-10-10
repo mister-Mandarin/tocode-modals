@@ -46,7 +46,7 @@
 
 <script>
 import Modals from '@/components/Modals/UI/Modal';
-import modalValidate from '@/components/modalValidate';
+import modalValidate from '@/components/Modals/modalValidate';
 
 export default {
 	components: {
