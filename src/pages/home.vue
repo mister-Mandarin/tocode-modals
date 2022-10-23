@@ -36,21 +36,32 @@
       Модальное окно с формой
     </button>
 
-    <!--    третее модальное окно с формой и валидацией-->
+    <!--    третее модальное окно с формой и валидацией + легкое ДЗ -->
     <button class="btn btnPrimary" @click="modalValidate = true">
       Модальное окно с формой + валидация
     </button>
     <modalValidate v-show="modalValidate" @close="modalValidate = false" />
+
+    <!--    Сложное ДЗ - четвертое модальное окно -->
+    <button class="btn btnPrimary" @click="modalLogin = true">
+      Авторизация
+    </button>
+    <modalLogin v-show="modalLogin" @close="modalLogin = false"
+                @toRegister="modalLogin = false; modalRegister = true" />
+    <modal-register v-show="modalRegister" @close="modalRegister = false"
+                    @toLogin="modalLogin = true; modalRegister = false" />
   </div>
 </template>
 
 <script>
 import Modals from '@/components/Modals/UI/Modal';
 import modalValidate from '@/components/Modals/modalValidate';
+import modalLogin from '@/components/Modals/modalLogin';
+import modalRegister from '@/components/Modals/modalRegister';
 
 export default {
 	components: {
-		Modals, modalValidate
+		Modals, modalValidate, modalLogin, modalRegister
 	},
 	data() {
 		return {
@@ -62,7 +73,9 @@ export default {
 				name: '',
 				email: ''
 			},
-			modalValidate: false
+			modalValidate: false,
+			modalLogin: false,
+			modalRegister: false
 		};
 	},
 	methods: {
