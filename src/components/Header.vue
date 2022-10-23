@@ -1,18 +1,18 @@
 <template>
-  <header class='navbar'>
-    <div class='container'>
-      <div class='navbar-content'>
-        <router-link class='navbar-logo' to='/'>{{ title }}</router-link>
-        <ul class='navbar-list'>
-          <li v-for='link in links' :key='link.alias' class='navbar-item'>
-            <router-link :to='link.url' class='navbar-link'
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <router-link class="navbar-logo" to="/">{{ title }}</router-link>
+        <ul class="navbar-list">
+          <li v-for="link in links" :key="link.alias" class="navbar-item">
+            <router-link :to="link.url" class="navbar-link"
             >{{ link.title }}
             </router-link>
           </li>
-          <li style='width: 40px'>
-            <a href='https://github.com/mister-Mandarin/tocode-Notes' target='_blank'>
-              <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
-                   alt='GitHub'>
+          <li style="width: 40px">
+            <a href="https://github.com/mister-Mandarin/tocode-modals" target="_blank">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                   alt="GitHub">
             </a>
           </li>
         </ul>

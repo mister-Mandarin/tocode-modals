@@ -3,7 +3,7 @@
     <h1>История релизов в этом приложении</h1>
     <br>
     <div>
-      <h2>🍏 <a href="https://github.com/mister-Mandarin/tocode-Notes/releases/tag/v1.0">Release v1.0</a></h2>
+      <h2>🍏 <a href="https://github.com/mister-Mandarin/tocode-modals/releases/tag/v1.0">Release v1.0</a></h2>
       <h3>Уроки и приложение адаптированы под vue 3</h3>
       <ul>
         <li>Легкое ДЗ - добавить поле пароля и проверку пароля</li>
