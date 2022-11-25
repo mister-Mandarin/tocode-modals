@@ -41,46 +41,46 @@ import Modal from '@/components/Modals/UI/Modal';
 
 
 export default {
-	components: { Modal },
+  components: { Modal },
 
-	data() {
-		return {
-			title: 'Авторизация',
-			email: '',
-			password: ''
-		};
-	},
-	methods: {
-		onSubmit() {
-			// touch запускает валидацию
-			this.v$.$touch();
+  data() {
+    return {
+      title: 'Авторизация',
+      email: '',
+      password: ''
+    };
+  },
+  methods: {
+    onSubmit() {
+      // touch запускает валидацию
+      this.v$.$touch();
 
-			if (!this.v$.$invalid) {
-				const user = {
-					email: this.email,
-					password: this.password
-				};
-				console.log(user);
+      if (!this.v$.$invalid) {
+        const user = {
+          email: this.email,
+          password: this.password
+        };
+        console.log(user);
 
-				this.email = '';
-				this.password = '';
-				this.v$.$reset();
-				this.$emit('close');
-			}
-		}
-	},
-	validations() {
-		return {
-			email: {
-				required,
-				email
-			},
-			password: {
-				required
-			}
-		};
-	},
-	setup: () => ({ v$: useVuelidate() })
+        this.email = '';
+        this.password = '';
+        this.v$.$reset();
+        this.$emit('close');
+      }
+    }
+  },
+  validations() {
+    return {
+      email: {
+        required,
+        email
+      },
+      password: {
+        required
+      }
+    };
+  },
+  setup: () => ({ v$: useVuelidate() })
 
 };
 </script>

@@ -8,4 +8,4 @@
 
 Вся проделанная работа отображена на странице About или в релизах на гитхаб.
 
-Release v.. Результат 👉 https://mister-mandarin.github.io/...
+Release v1.0 Результат 👉 https://mister-mandarin.github.io/tocode-modals/ 

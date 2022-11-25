@@ -16,10 +16,10 @@
 import { links } from '@/_config';
 
 export default {
-	data() {
-		return {
-			links: links
-		};
-	}
+  data() {
+    return {
+      links: links
+    };
+  }
 };
 </script>

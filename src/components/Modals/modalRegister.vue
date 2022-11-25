@@ -45,52 +45,52 @@ import { useVuelidate } from '@vuelidate/core';
 import Modal from '@/components/Modals/UI/Modal';
 
 export default {
-	components: { Modal },
+  components: { Modal },
 
-	data() {
-		return {
-			title: 'Форма регистрации',
-			email: '',
-			password: '',
-			confirmPassword: ''
-		};
-	},
-	methods: {
-		onSubmit() {
-			// touch запускает валидацию
-			this.v$.$touch();
+  data() {
+    return {
+      title: 'Форма регистрации',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    };
+  },
+  methods: {
+    onSubmit() {
+      // touch запускает валидацию
+      this.v$.$touch();
 
-			if (!this.v$.$invalid) {
-				const user = {
-					email: this.email,
-					password: this.password,
-					confirmPassword: this.confirmPassword
-				};
-				console.log(user);
+      if (!this.v$.$invalid) {
+        const user = {
+          email: this.email,
+          password: this.password,
+          confirmPassword: this.confirmPassword
+        };
+        console.log(user);
 
-				this.email = '';
-				this.password = '';
-				this.confirmPassword = '';
-				this.v$.$reset();
-				this.$emit('close');
-			}
-		}
-	},
-	validations() {
-		return {
-			email: {
-				required,
-				email
-			},
-			password: {
-				required
-			},
-			confirmPassword: {
-				sameAs: sameAs(this.password)
-			}
-		};
-	},
-	setup: () => ({ v$: useVuelidate() })
+        this.email = '';
+        this.password = '';
+        this.confirmPassword = '';
+        this.v$.$reset();
+        this.$emit('close');
+      }
+    }
+  },
+  validations() {
+    return {
+      email: {
+        required,
+        email
+      },
+      password: {
+        required
+      },
+      confirmPassword: {
+        sameAs: sameAs(this.password)
+      }
+    };
+  },
+  setup: () => ({ v$: useVuelidate() })
 
 };
 </script>

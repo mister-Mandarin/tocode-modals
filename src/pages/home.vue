@@ -21,7 +21,7 @@
     <Modals v-show="secondModal.show" :title="secondModal.title" @close="secondModal.show=false">
       <template v-slot:body>
         <form @submit.prevent="submitSecondForm">
-          <label>Имя:</label>
+          <label>Имя:</label> 
           <input type="text" required v-model="secondModal.name">
 
           <label>Email:</label>
